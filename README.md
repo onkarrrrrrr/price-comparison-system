@@ -27,8 +27,7 @@ An enterprise-grade price comparison web application that scrapes product inform
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Anupam1707/Infosys-Demo-Project.git
-   cd Infosys-Demo-Project
+   git clone https://github.com/onkarrrrrrr/price-comparison-system
    ```
 
 2. **Install Python dependencies**
@@ -169,9 +168,9 @@ This application is for educational and personal use only. Please respect the te
 
 For support and questions:
 - 📧 Email: support@pricescraper.com
-- 🐛 Issues: [GitHub Issues](https://github.com/Anupam1707/Infosys-Demo-Project/issues)
-- 📖 Documentation: [Wiki](https://github.com/Anupam1707/Infosys-Demo-Project/wiki)
+- 🐛 Issues: [GitHub Issues](https://github.com/onkarrrrrrr/price-comparison-system)
+- 📖 Documentation: [Wiki](https://github.com/onkarrrrrrr/price-comparison-system/wiki)
 
 ---
 
-**Made with ❤️ for Infosys Springboard Internship**
+**Made with ❤️ by Onkar Pathrikar**
