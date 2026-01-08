@@ -12,3 +12,4 @@ requests==2.31.0
 google-generativeai>=0.7.0
 undetected-chromedriver==3.5.4
 webdriver-manager==4.0.1
+gunicorn
