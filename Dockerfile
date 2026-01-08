@@ -1,7 +1,7 @@
-# Python 3.9 use karein
-FROM python:3.9-slim
+# Stable Python version use karein (Bookworm)
+FROM python:3.9-slim-bookworm
 
-# 1. System packages install karein (Updated for modern Linux)
+# 1. System packages aur Chrome install karein (Modern GPG tarike se)
 RUN apt-get update && apt-get install -y \
     wget \
     gnupg \
@@ -14,24 +14,22 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# 2. Working directory set karein
+# 2. Working directory
 WORKDIR /app
 
-# 3. Requirements file copy karein
+# 3. Dependencies
 COPY requirements.txt .
-
-# 4. Saari libraries install karein
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 5. Baaki saara code copy karein
+# 4. Copy Code
 COPY . .
 
-# 6. Render ka port expose karein
+# 5. Port
 EXPOSE 10000
 
-# 7. Chrome Environment variables
+# 6. Chrome Drivers Setup
 ENV CHROME_BIN=/usr/bin/google-chrome
 ENV CHROMEDRIVER_PATH=/usr/bin/chromedriver
 
-# 8. Server Start Command
+# 7. Start Command
 CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:10000", "--timeout", "120"]
